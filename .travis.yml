@@ -5,6 +5,12 @@ branches:
   only:
   - master
 
+cache:
+  bundler: true
+  directories:
+    - node_modules # NPM packages
+    - ~/.npm
+
 git:
   depth: 2
 
@@ -24,12 +30,16 @@ before_script:
   - base64 -d <<< $RSAKEY > ~/.ssh/id_rsa
   - chmod 600 ~/.ssh/id_rsa
   - git clone --depth=1 -b gh-pages "${GH_REF}" "${BUILD_PATH}"
+  - npm i -g eslint@2.13.1
 
 script:
   - ./run.js
+  - eslint _site/ --no-eslintrc --ext .js --ext .txt --ext .pac
 
 after_success:
-  - git commit -am "auto build" && git push -f "${GH_REF}" gh-pages:gh-pages
+  - cd "$BUILD_PATH" 
+  - git add .
+  - git commit -m "auto build" && git push -f "${GH_REF}" gh-pages:gh-pages
 
 
 notifications:
