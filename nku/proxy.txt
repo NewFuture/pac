@@ -1,0 +1,6 @@
+;常用代理地址
+;proxy host:port
+
+localhost:1080;默认本机IP
+localhost:1111
+127.0.0.1:1080;ipv4本机

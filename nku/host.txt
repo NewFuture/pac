@@ -1,0 +1,21 @@
+;域名或者ip白名单
+;英语分号相当于注释
+;格式：
+; host(ip,域名，或者正则表达式)
+
+;IP 白名单
+bt.byr.cn;北邮BT
+tv.byr.cn;北邮TV
+pt.zhixing.bjtu.edu.cn;北交知行PT
+pt.tju.edu.cn;北洋PT
+vagrant.yunyin.org;虚拟机调试
+local.yunyin.org;本机调试
+
+;正则表达式白名单
+/\.nankai\.edu\.cn$/;南开主域名
+/\.nku\.cn$/;南开域名
+/\.neu6\.edu\.cn$/;东北v6
+/^ipv6\..*\.edu\.cn$/;高校ipv6
+/.*\.mobisys\.cc$/;实验室域名
+/.*\.newfuture\.win$/;newfuture域名
+/tuna.tsinghua.edu.cn$/;清华软件源
