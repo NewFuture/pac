@@ -76,7 +76,7 @@ var pac = function(host_list, net_list, proxy) {
     var reg_host = [];
     for (var i in host_list) {
         var host = host_list[i].trim();
-        if (host.startsWith('/') && host.endsWith('/')) {
+        if ('/' === host[0] && host.slice(-1) === '/') {
             //正则表达式
             reg_host.push(host);
         } else {
