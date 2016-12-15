@@ -6,9 +6,9 @@ branches:
   - master
 
 cache:
-  bundler: true
   directories:
     - node_modules # NPM packages
+    - $HOME/.npm # NPM packages
 
 git:
   depth: 2
@@ -29,7 +29,7 @@ before_script:
   - base64 -d <<< $RSAKEY > ~/.ssh/id_rsa
   - chmod 600 ~/.ssh/id_rsa
   - git clone --depth=1 -b gh-pages "${GH_REF}" "${BUILD_PATH}"
-  - npm i eslint@2.13.1
+  - npm i eslint@2.13.1 --cache-min 999999
 
 script:
   - ./run.js

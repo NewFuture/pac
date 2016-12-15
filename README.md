@@ -22,7 +22,7 @@
 * ip网段白名单： [网段列表](nku/net.txt) 按格式添加一行ip和子网掩码即可
 * 增加代理地址：[代理列表](nku/proxy.txt) 按格式添加一行代理主机和端口即可
 
-## 编译生成
+## 编译生成 [![Build Status](https://travis-ci.org/NewFuture/pac.svg?branch=master)](https://travis-ci.org/NewFuture/pac)
 
 * 手动编译(需要node)：运行 `./run.js`即可
 * 自动编译: 每次提交合并后会自动编译，并把生成结果自动发步到gh-pages分支(网站)
