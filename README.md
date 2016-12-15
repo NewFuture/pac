@@ -2,7 +2,7 @@
 
 PAC代理配置文件(自动跳过内网,局域网和ipv6)
 
-根据[github.com/NewFuture/pac](https://github.com/NewFuture/pac)自动生成于 {{ site.date }}
+根据[github.com/NewFuture/pac](https://github.com/NewFuture/pac)自动生成于 {{site.time}}
 
 ---------
 
