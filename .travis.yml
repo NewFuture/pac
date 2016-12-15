@@ -1,0 +1,38 @@
+language: node_js
+sudo: false
+
+branches:
+  only:
+  - master
+
+git:
+  depth: 2
+
+env:
+ global:
+  - GIT_AUTHOR_NAME: "NewFuture"
+  - GH_REF: "git@github.com:NewFuture/pac.git"
+  - BUILD_PATH: "_site/"
+  - GIT_REF: "NewFuture/WWOF.git"
+  - GIT_AUTHOR_EMAIL:  "${GIT_AUTHOR_NAME}@users.noreply.github.com"
+  - GIT_COMMITTER_NAME: "${GIT_AUTHOR_NAME}"
+  - GIT_COMMITTER_EMAIL: "${GIT_COMMITTER_NAME}@users.noreply.github.com"
+
+install: true
+
+before_script:
+  - base64 -d <<< $RSAKEY > ~/.ssh/id_rsa
+  - chmod 600 ~/.ssh/id_rsa
+  - git clone --depth=1 -b gh-pages "${GH_REF}" "${BUILD_PATH}"
+
+script:
+  - ./run.js
+
+after_success:
+  - git commit -am "auto build" && git push -f "${GH_REF}" gh-pages:gh-pages
+
+
+notifications:
+  email:
+    on_failure: change
+    on_success: change
