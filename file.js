@@ -4,7 +4,7 @@ var fs = require("fs");
 var path = require('path');
 
 var SEPARATOR = ';'; // comment
-
+var INGORE = ['node_modules']; //忽略目录
 /*
 读取文件
 数组形式返回有效行
@@ -40,12 +40,26 @@ function proxyFile(proxy, pre) {
     var s = proxy.split(':');
     var port = s.pop();
     var file = s.join('-').replace(/\[|\]/g, '_') + '/' + port;
-    // ext = ext || '';
     return pre ? pre + file : file;
+}
+
+/*
+ * 读取目录 
+ */
+function listDir(base, filter) {
+    base = base || __dirname;
+    filter = filter || function(s) {
+        return '._-'.indexOf(s[0]) < 0 && INGORE.indexOf(s) < 0 &&
+            fs.lstatSync(base + '/' + s).isDirectory();
+    };
+
+    var dirs = fs.readdirSync(base);
+    return dirs.filter(filter);
 }
 
 exports = module.exports = {
     readLines: readLines,
     save: save,
-    proxyFile: proxyFile
+    proxyFile: proxyFile,
+    listDir: listDir
 }
