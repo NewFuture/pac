@@ -25,15 +25,15 @@ function generate(name) {
 
     //ss pac
     file.save(OUTPUT_PATH + f, pac(hosts, nets));
-    readme += "\n## " + name + "代理PAC\n\n";
-    readme += "* [SS 本地PAC配置](" + link + "): `" + link + "`\n";
+    readme += "\n## " + name + "代理PAC\n\n请根据需要选择合适的配置^_^\n\n";
+    readme += "* 使用SS本地PAC配置: 下载[此pac.txt](" + link + ")然后覆盖本地文件夹下pac.txt\n";
 
     //each output
     proxy.forEach(function(p) {
         f = file.proxyFile(p, name + '/') + '.pac';
         file.save(OUTPUT_PATH + f, pac.setProxy(p));
         link = URL + f;
-        readme += "* [代理地址" + p + "](" + link + "): `" + link + "`\n";
+        readme += "* [使用代理" + p + "](" + link + "): **`" + link + "`**\n";
     });
 }
 

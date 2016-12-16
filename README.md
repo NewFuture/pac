@@ -2,11 +2,13 @@
 
 自动生成PAC代理配置文件(自动跳过内网,局域网和ipv6)
 
-## usage
+## Usage
 
 ### 使用最新的在线pac
 
 在[https://pac.newfuture.xyz](https://pac.newfuture.xyz) 根据本机端口选择的pac
+
+使用场景:
 
 * chrome SwitchyOmega 等代理插件选择在线PAC模式填写对应的URL即可
 * windows 系统设置->网络->代理->自动代理，代理脚本，填入对应的URL即可
