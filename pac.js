@@ -1,4 +1,5 @@
 "use strict";
+//根据参数自动生成PAC配置
 //http://findproxyforurl.com/pac-functions/
 var fs = require('fs');
 var assert = require('assert');
@@ -46,7 +47,7 @@ function regxHost(hosts, host_var) {
     hosts = hosts.map(function(s) {
         return s + '.test(' + host_var + ')';
     });
-    return hosts.join(' ||\n        ') || 'false';
+    return hosts.join('\n        || ') || 'false';
 }
 
 function inNet(list, host_var) {
@@ -65,7 +66,7 @@ function inNet(list, host_var) {
             netlist.push(line);
         }
     }
-    return netlist.join(' ||\n        ') || 'true';
+    return netlist.join('\n        || ') || 'true';
 }
 
 /*

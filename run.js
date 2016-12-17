@@ -1,17 +1,17 @@
 #!/usr/bin/env node
 
 "use strict";
-//自动生成代理配置PAC
+//配置读取和自动生成代理配置PAC
 
 var file = require("./file.js");
 var pac = require("./pac.js");
 
 var OUTPUT_PATH = '_site/';
 var URL = 'https://pac.newfuture.xyz/';
-var readme = '# 代理配置\n\n\
+var readme = '# 代理配置\n\
 PAC代理配置文件(自动跳过内网,局域网和ipv6)\n\n\
-根据[github.com/NewFuture/pac](https://github.com/NewFuture/pac)自动生成于 {{site.time}}\n\
-\n---------\n';
+根据[github.com/NewFuture/pac](https://github.com/NewFuture/pac)自动更新于 {{site.time}}\n\
+\n---\n';
 
 /*
  * 生成一组PAC
@@ -21,19 +21,15 @@ function generate(name) {
     var nets = file.readLines(name + '/net.txt');
     var proxy = file.readLines(name + '/proxy.txt');
     var f = name + '/pac.txt';
-    var link = URL + f;
-
     //ss pac
     file.save(OUTPUT_PATH + f, pac(hosts, nets));
-    readme += "\n## " + name + "代理PAC\n\n请根据需要选择合适的配置^_^\n\n";
-    readme += "* 使用SS本地PAC配置: 下载[此pac.txt](" + link + ")然后覆盖本地文件夹下pac.txt\n";
-
+    readme += "\n## " + name + "代理PAC\n请根据需要选择合适的配置^_^\n\n";
+    readme += "* SS客户端使用本地PAC: 下载[此pac.txt](" + f + "),然后覆盖本地文件夹下pac.txt\n";
     //each output
     proxy.forEach(function(p) {
         f = file.proxyFile(p, name + '/') + '.pac';
         file.save(OUTPUT_PATH + f, pac.setProxy(p));
-        link = URL + f;
-        readme += "* [使用代理" + p + "](" + link + "): **`" + link + "`**\n";
+        readme += "* [使用代理" + p + "](" + f + "): **`" + URL + f + "`**\n";
     });
 }
 
