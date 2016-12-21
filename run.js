@@ -9,12 +9,13 @@ var pac = require("./pac.js");
 var OUTPUT_PATH = '_site/'; //输出路径
 var PROXY_TYPE = ["SOCKS5", "PROXY", "SOCKS"]; //代理方式列表
 var URL = 'https://pac.newfuture.xyz/'; //发布站点目录
-var readme = '# 代理配置\n\
-PAC代理配置文件(自动跳过内网,局域网和ipv6)\n\n\
-根据[github.com/NewFuture/pac](https://github.com/NewFuture/pac)自动更新于 {{site.time}}\n\n\
+var readme = '# 自动代理配置(Proxy Auto Config)\n\
+自动跳过内网,局域网和常用ipv6\n\n\
 说明:\n\n\
-* `pac.txt`为windows版SS客户端自动生成系统代理的模板\n\
-* `综合代理`根据代理是否可用,切换代理方式;如都不可用切换为**直接连接**\n\
+* 【`综合代理`】根据代理是否可用,切换代理方式;如都不可用切换为**直接连接**.\n\
+* 【`指定代理`】只使用指定的代理方式(其中PROXY表示http代理).\n\
+* 【`pac.txt`】为windows版SS客户端自动生成系统代理的模板.\n\
+* 常用浏览器，Windows和Mac等系统均支持PAC代理模式.\n\
 * 请根据需要选择合适的配置^_^\n\
 \n---\n';
 
@@ -32,7 +33,7 @@ function generate(name) {
     //ss pac
     file.save(OUTPUT_PATH + f, pac.setProxy());
     readme += "\n## " + name + "代理自动配置(PAC for " + name + ")\n\n";
-    readme += "* SS客户端使用本地PAC: 下载[此pac.txt](" + f + "),然后覆盖(或修改)本地文件夹下pac.txt\n\n";
+    readme += "* SS客户端使用本地PAC: 下载[此pac.txt](" + f + "),然后覆盖(或修改)本地文件夹下pac.txt\n";
 
     //each output
     proxylist.forEach(function(proxy) {
@@ -56,4 +57,6 @@ function generate(name) {
 //处理当前文件夹下全部目录
 file.listDir().forEach(generate);
 //更新readme
+
+readme += "\n所有内容根据[github.com/NewFuture/pac](https://github.com/NewFuture/pac)自动更新于 {{site.time}}\n";
 file.save(OUTPUT_PATH + 'README.md', readme);
