@@ -14,7 +14,6 @@
 ## nku代理自动配置(PAC for nku)
 
 * SS客户端使用本地PAC: 下载[此pac.txt](nku/pac.txt),然后覆盖(或修改)本地文件夹下pac.txt
-
 * [综合代理localhost:1080](nku/localhost/1080.pac)(自动切换下面3种方式): **`https://pac.newfuture.xyz/nku/localhost/1080.pac`**
 	- [指定代理SOCKS5://localhost:1080](nku/SOCKS5/localhost/1080.pac): **`https://pac.newfuture.xyz/nku/SOCKS5/localhost/1080.pac`**
 	- [指定代理PROXY://localhost:1080](nku/PROXY/localhost/1080.pac): **`https://pac.newfuture.xyz/nku/PROXY/localhost/1080.pac`**

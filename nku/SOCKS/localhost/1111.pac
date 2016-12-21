@@ -34,5 +34,5 @@ function FindProxyForURL(url, host) {
     ) {/*Intranet IP*/
         return "DIRECT";
     }
-    return "PROXY __proxy__";
+    return "SOCKS localhost:1111";
 };

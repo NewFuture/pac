@@ -34,5 +34,5 @@ function FindProxyForURL(url, host) {
     ) {/*Intranet IP*/
         return "DIRECT";
     }
-    return "PROXY __proxy__";
+    return "PROXY 127.0.0.1:1080";
 };
