@@ -39,7 +39,7 @@ function save(file, data) {
 function proxyFile(proxy, pre) {
     var s = proxy.split(':');
     var port = s.pop();
-    var file = s.join('-').replace(/\[|\]/g, '_') + '/' + port;
+    var file = s.join('-').replace(' ', '/').replace(/\[|\]/g, '_') + '/' + port;
     return pre ? pre + file : file;
 }
 

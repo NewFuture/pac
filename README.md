@@ -1,5 +1,6 @@
 # PAC （自动代理配置）
 
+Proxy Auto-Config generator
 自动生成PAC代理配置文件(自动跳过内网,局域网和ipv6)
 
 ## Usage
