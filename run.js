@@ -7,13 +7,13 @@ var file = require("./file.js");
 var pac = require("./pac.js");
 
 var OUTPUT_PATH = '_site/'; //输出路径
-var PROXY_TYPE = ["SOCKS5", "PROXY", "SOCKS"]; //代理方式列表
+var PROXY_TYPE = ["SOCKS5", "HTTP", "SOCKS"]; //代理方式列表
 var URL = 'https://pac.newfuture.xyz/'; //发布站点目录
 var readme = '# 自动代理配置(Proxy Auto Config)\n\
 自动跳过内网,局域网和常用ipv6\n\n\
 说明:\n\n\
 * 【`综合代理`】根据代理是否可用,切换代理方式;如都不可用切换为**直接连接**.\n\
-* 【`指定代理`】只使用指定的代理方式(其中PROXY表示http代理).\n\
+* 【`指定代理`】只使用指定的代理方式(请确认系统和代理端同时支持).\n\
 * 【`pac.txt`】为windows版SS客户端自动生成系统代理的模板.\n\
 * 常用浏览器，Windows和Mac等系统均支持PAC代理模式.\n\
 * 请根据需要选择合适的配置^_^\n\
@@ -59,4 +59,6 @@ file.listDir().forEach(generate);
 //更新readme
 
 readme += "\n所有内容根据[github.com/NewFuture/pac](https://github.com/NewFuture/pac)自动更新于 {{site.time}}\n";
+readme += "\n[需要帮助，反馈意见或者发现BUG欢迎在此提出](https://github.com/NewFuture/pac/issues)\n";
+
 file.save(OUTPUT_PATH + 'README.md', readme);

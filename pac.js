@@ -94,7 +94,7 @@ var pac = function(host_list, net_list, proxy) {
 };
 
 pac.setProxy = function(proxy) {
-    proxy = proxy || "PROXY __proxy__";
+    proxy = proxy ? proxy.replace("HTTP ", "PROXY ") : "PROXY __proxy__";
     return pac._script.replace('__PROXY__', proxy);
 };
 
