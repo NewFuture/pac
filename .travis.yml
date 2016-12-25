@@ -15,10 +15,10 @@ git:
 
 env:
  global:
-  - GIT_AUTHOR_NAME: "NewFuture"
   - GH_REF: "git@github.com:NewFuture/pac.git"
+  - GH_BRANCH: "gh-pages"
   - BUILD_PATH: "_site/"
-  - GIT_REF: "NewFuture/WWOF.git"
+  - GIT_AUTHOR_NAME: "NewFuture"  
   - GIT_AUTHOR_EMAIL:  "${GIT_AUTHOR_NAME}@users.noreply.github.com"
   - GIT_COMMITTER_NAME: "${GIT_AUTHOR_NAME}"
   - GIT_COMMITTER_EMAIL: "${GIT_COMMITTER_NAME}@users.noreply.github.com"
@@ -28,7 +28,7 @@ install: true
 before_script:
   - base64 -d <<< $RSAKEY > ~/.ssh/id_rsa
   - chmod 600 ~/.ssh/id_rsa
-  - git clone --depth=1 -b gh-pages "${GH_REF}" "${BUILD_PATH}"
+  - git clone --depth=1 -b ${GH_BRANCH} "${GH_REF}" "${BUILD_PATH}"
   - npm i eslint@2.13.1 --cache-min 999999
 
 script:
@@ -38,7 +38,7 @@ script:
 after_success:
   - cd "$BUILD_PATH" 
   - git add .
-  - git commit -m "auto build" && git push -f "${GH_REF}" gh-pages:gh-pages
+  - git commit -m "auto build [skip ci]" && git push -f "${GH_REF}" ${GH_BRANCH}:${GH_BRANCH}
 
 
 notifications:
