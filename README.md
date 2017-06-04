@@ -14,18 +14,18 @@
 ## nku代理自动配置(PAC for nku)
 
 * SS客户端使用本地PAC: 下载[此pac.txt](nku/pac.txt),然后覆盖(或修改)本地文件夹下pac.txt
-* [综合代理localhost:1080](nku/localhost/1080.pac)(自动切换下面3种方式): **`https://pac.newfuture.xyz/nku/localhost/1080.pac`**
-	- [指定代理SOCKS5://localhost:1080](nku/socks5/localhost/1080.pac): **`https://pac.newfuture.xyz/nku/socks5/localhost/1080.pac`**
-	- [指定代理HTTP://localhost:1080](nku/http/localhost/1080.pac): **`https://pac.newfuture.xyz/nku/http/localhost/1080.pac`**
-	- [指定代理SOCKS://localhost:1080](nku/socks/localhost/1080.pac): **`https://pac.newfuture.xyz/nku/socks/localhost/1080.pac`**
-* [综合代理localhost:1111](nku/localhost/1111.pac)(自动切换下面3种方式): **`https://pac.newfuture.xyz/nku/localhost/1111.pac`**
-	- [指定代理SOCKS5://localhost:1111](nku/socks5/localhost/1111.pac): **`https://pac.newfuture.xyz/nku/socks5/localhost/1111.pac`**
-	- [指定代理HTTP://localhost:1111](nku/http/localhost/1111.pac): **`https://pac.newfuture.xyz/nku/http/localhost/1111.pac`**
-	- [指定代理SOCKS://localhost:1111](nku/socks/localhost/1111.pac): **`https://pac.newfuture.xyz/nku/socks/localhost/1111.pac`**
-* [综合代理127.0.0.1:1080](nku/127.0.0.1/1080.pac)(自动切换下面3种方式): **`https://pac.newfuture.xyz/nku/127.0.0.1/1080.pac`**
-	- [指定代理SOCKS5://127.0.0.1:1080](nku/socks5/127.0.0.1/1080.pac): **`https://pac.newfuture.xyz/nku/socks5/127.0.0.1/1080.pac`**
-	- [指定代理HTTP://127.0.0.1:1080](nku/http/127.0.0.1/1080.pac): **`https://pac.newfuture.xyz/nku/http/127.0.0.1/1080.pac`**
-	- [指定代理SOCKS://127.0.0.1:1080](nku/socks/127.0.0.1/1080.pac): **`https://pac.newfuture.xyz/nku/socks/127.0.0.1/1080.pac`**
+* [综合代理localhost:1080](nku/localhost/1080.pac)(自动切换下面3种方式): **`http://pac.newfuture.cc/nku/localhost/1080.pac`**
+	- [指定代理SOCKS5://localhost:1080](nku/socks5/localhost/1080.pac): **`http://pac.newfuture.cc/nku/socks5/localhost/1080.pac`**
+	- [指定代理HTTP://localhost:1080](nku/http/localhost/1080.pac): **`http://pac.newfuture.cc/nku/http/localhost/1080.pac`**
+	- [指定代理SOCKS://localhost:1080](nku/socks/localhost/1080.pac): **`http://pac.newfuture.cc/nku/socks/localhost/1080.pac`**
+* [综合代理localhost:1111](nku/localhost/1111.pac)(自动切换下面3种方式): **`http://pac.newfuture.cc/nku/localhost/1111.pac`**
+	- [指定代理SOCKS5://localhost:1111](nku/socks5/localhost/1111.pac): **`http://pac.newfuture.cc/nku/socks5/localhost/1111.pac`**
+	- [指定代理HTTP://localhost:1111](nku/http/localhost/1111.pac): **`http://pac.newfuture.cc/nku/http/localhost/1111.pac`**
+	- [指定代理SOCKS://localhost:1111](nku/socks/localhost/1111.pac): **`http://pac.newfuture.cc/nku/socks/localhost/1111.pac`**
+* [综合代理127.0.0.1:1080](nku/127.0.0.1/1080.pac)(自动切换下面3种方式): **`http://pac.newfuture.cc/nku/127.0.0.1/1080.pac`**
+	- [指定代理SOCKS5://127.0.0.1:1080](nku/socks5/127.0.0.1/1080.pac): **`http://pac.newfuture.cc/nku/socks5/127.0.0.1/1080.pac`**
+	- [指定代理HTTP://127.0.0.1:1080](nku/http/127.0.0.1/1080.pac): **`http://pac.newfuture.cc/nku/http/127.0.0.1/1080.pac`**
+	- [指定代理SOCKS://127.0.0.1:1080](nku/socks/127.0.0.1/1080.pac): **`http://pac.newfuture.cc/nku/socks/127.0.0.1/1080.pac`**
 
 ---
 
