@@ -8,7 +8,7 @@ var pac = require("./pac.js");
 
 var OUTPUT_PATH = '_site/'; //输出路径
 var PROXY_TYPE = ["SOCKS5", "HTTP", "SOCKS"]; //代理方式列表
-var URL = 'https://pac.newfuture.xyz/'; //发布站点目录
+var URL = 'http://pac.newfuture.cc/'; //发布站点目录
 var readme = '# 自动代理配置(Proxy Auto Config)\n\
 自动跳过内网,局域网和常用ipv6\n\n\
 说明:\n\n\

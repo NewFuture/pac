@@ -6,7 +6,7 @@ Proxy Auto-Config generator
 
 ## Usage(使用)
 
-在[https://pac.newfuture.xyz](https://pac.newfuture.xyz)(此站支持ipv6) 根据本机端口选择的pac
+在[https://pac.newfuture.cc](https://newfuture.github.io/pac/)(~~此站支持ipv6~~) 根据本机端口选择的pac
 
 使用场景:
 
@@ -14,7 +14,7 @@ Proxy Auto-Config generator
 * Chrome SwitchyOmega 等代理插件选择在线PAC模式填写对应的URL即可
 * windows 系统设置->网络->代理->自动代理，代理脚本，填入对应的URL即可
 * 使用ss `在线代理`填入url，作用同上
-* Windwos版ss客户端本地代理 [https://pac.newfuture.xyz](https://pac.newfuture.xyz) 选择 `pac.txt` 替换本地pac.txt即可
+* Windwos版ss客户端本地代理 [在此](https://newfuture.github.io/pac/) 选择 `pac.txt` 替换本地pac.txt即可
 
 ## Contribution
 
@@ -30,5 +30,5 @@ Proxy Auto-Config generator
 可以本机手动编译或者Travis自动编译生成:
 
 * 手动编译(需要node)：运行 `./run.js`即可
-* 自动编译: 每次提交合并后会自动编译，并把生成结果自动发步到[gh-pages分支](https://github.com/NewFuture/pac/tree/gh-pages)([网站](https://pac.newfuture.xyz/))
+* 自动编译: 每次提交合并后会自动编译，并把生成结果自动发步到[gh-pages分支](https://github.com/NewFuture/pac/tree/gh-pages)([网站](https://newfuture.github.io/pac/))
  
