@@ -6,7 +6,6 @@
 ;IP 白名单
 bt.byr.cn;北邮BT
 tv.byr.cn;北邮TV
-pt.zhixing.bjtu.edu.cn;北交知行PT
 pt.tju.edu.cn;北洋PT
 vagrant.yunyin.org;虚拟机调试
 local.yunyin.org;本机调试
@@ -18,4 +17,5 @@ local.yunyin.org;本机调试
 /^ipv6\..*\.edu\.cn$/;高校ipv6
 /.*\.mobisys\.cc$/;实验室域名
 /.*\.newfuture\.win$/;newfuture域名
-/tuna.tsinghua.edu.cn$/;清华软件源
+/tuna\.tsinghua\.edu\.cn$/;清华软件源
+/.*zhixing\.bjtu\.edu\.cn$/;北交知行PT
