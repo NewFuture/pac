@@ -6,7 +6,6 @@
 var WhiteListHost = {
     "bt.byr.cn": true,
     "tv.byr.cn": true,
-    "pt.zhixing.bjtu.edu.cn": true,
     "pt.tju.edu.cn": true,
     "vagrant.yunyin.org": true,
     "local.yunyin.org": true
@@ -20,7 +19,8 @@ function FindProxyForURL(url, host) {
         || /^ipv6\..*\.edu\.cn$/.test(host)
         || /.*\.mobisys\.cc$/.test(host)
         || /.*\.newfuture\.win$/.test(host)
-        || /tuna.tsinghua.edu.cn$/.test(host)
+        || /tuna\.tsinghua\.edu\.cn$/.test(host)
+        || /.*zhixing\.bjtu\.edu\.cn$/.test(host)
     ) {/*Plain Host Name or in whitelist*/
         return "DIRECT";
     } else if (/^(\d{1,3}\.){3}\d{1,3}$/.test(host)
