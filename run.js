@@ -12,8 +12,8 @@ var URL = 'http://pac.newfuture.cc/'; //发布站点目录
 var readme = '# 自动代理配置(Proxy Auto Config)\n\
 自动跳过内网,局域网和常用ipv6\n\n\
 说明:\n\n\
-* 【`综合代理`】根据代理是否可用,切换代理方式;如都不可用切换为**直接连接**.\n\
-* 【`指定代理`】只使用指定的代理方式(请确认系统和代理端同时支持).\n\
+* 【`全部代理`】根据代理是否可用,切换代理协议;如都不可用切换为**直接连接**.\n\
+* 【`指定协议`】只使用指定的代理协议方式(chrome插件可选用socks5代理效率高).\n\
 * 【`pac.txt`】为windows版SS客户端自动生成系统代理的模板.\n\
 * 常用浏览器，Windows和Mac等系统均支持PAC代理模式.\n\
 * 请根据需要选择合适的配置^_^\n\
@@ -41,14 +41,14 @@ function generate(name) {
         f = file.proxyFile(proxy, name + '/') + '.pac';
         var p = Array.prototype.concat(PROXY_TYPE, "DIRECT").join(" " + proxy + "; ");
         file.save(OUTPUT_PATH + f, pac.setProxy(p));
-        readme += "* [综合代理" + proxy + "](" + f + ")(自动切换下面" + PROXY_TYPE.length + "种方式): **`" + URL + f + "`**\n";
+        readme += "* [全部代理" + proxy + "](" + f + ")(自动切换下面" + PROXY_TYPE.length + "种代理协议): **`" + URL + f + "`**\n";
 
         //多代理
         PROXY_TYPE.forEach(function(type) { //每种代理方式生成一个目录
             var p = type + " " + proxy;
             var f = file.proxyFile(p, name + '/') + '.pac';
             file.save(OUTPUT_PATH + f, pac.setProxy(p));
-            readme += "\t- [指定代理" + type + "://" + proxy + "](" + f + "): **`" + URL + f + "`**\n";
+            readme += "\t- [仅" + type + "://" + proxy + "](" + f + "): **`" + URL + f + "`**\n";
         });
     });
     readme += "\n---\n";
