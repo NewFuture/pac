@@ -8,7 +8,8 @@ var WhiteListHost = {
     "tv.byr.cn": true,
     "pt.tju.edu.cn": true,
     "vagrant.yunyin.org": true,
-    "local.yunyin.org": true
+    "local.yunyin.org": true,
+    "ieeexplore.ieee.org": true
 };
 function FindProxyForURL(url, host) {
     if (host.indexOf(".") < 0
