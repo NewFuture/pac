@@ -9,7 +9,8 @@ var WhiteListHost = {
     "pt.tju.edu.cn": true,
     "vagrant.yunyin.org": true,
     "local.yunyin.org": true,
-    "ieeexplore.ieee.org": true
+    "ieeexplore.ieee.org": true,
+    "f.wanfangdata.com.cn": true
 };
 function FindProxyForURL(url, host) {
     if (host.indexOf(".") < 0
