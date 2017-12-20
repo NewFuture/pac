@@ -3,7 +3,7 @@
 ;格式：
 ; host(ip,域名，或者正则表达式)
 
-;IP/主机 白名单
+;IP/域名 白名单
 bt.byr.cn;北邮BT
 tv.byr.cn;北邮TV
 pt.tju.edu.cn;北洋PT
@@ -11,7 +11,7 @@ vagrant.yunyin.org;虚拟机调试
 local.yunyin.org;本机调试
 
 ieeexplore.ieee.org;IEEE论文
-
+f.wanfangdata.com.cn;万方数据库
 
 ;正则表达式白名单
 /\.nankai\.edu\.cn$/;南开主域名
