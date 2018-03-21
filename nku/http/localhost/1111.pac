@@ -10,7 +10,9 @@ var WhiteListHost = {
     "vagrant.yunyin.org": true,
     "local.yunyin.org": true,
     "ieeexplore.ieee.org": true,
-    "f.wanfangdata.com.cn": true
+    "f.wanfangdata.com.cn": true,
+    "www.cqvip.com": true,
+    "download.cqvip.com": true
 };
 function FindProxyForURL(url, host) {
     if (host.indexOf(".") < 0
