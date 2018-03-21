@@ -12,6 +12,8 @@ local.yunyin.org;本机调试
 
 ieeexplore.ieee.org;IEEE论文
 f.wanfangdata.com.cn;万方数据库
+www.cqvip.com;维普网
+download.cqvip.com;维普网论文下载
 
 ;正则表达式白名单
 /\.nankai\.edu\.cn$/;南开主域名
