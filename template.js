@@ -1,7 +1,7 @@
 "use strict";
 /*
 * Generated from https://github.com/NewFuture/pac
-* see all pac files https://pac.newfuture.xyz
+* see all pac files https://pac.newfuture.cc
 */
 var WhiteListHost = __WHITE_LIST__;
 function FindProxyForURL(url, host) {
