@@ -14,9 +14,7 @@ jobs:
       GH_BRANCH: "gh-pages"
       BUILD_PATH: "_site/"
       GIT_AUTHOR_NAME: "NewFuture"
-      GIT_AUTHOR_EMAIL: "${{ secrets.GIT_AUTHOR_NAME }}@users.noreply.github.com"
-      GIT_COMMITTER_NAME: "${{ secrets.GIT_AUTHOR_NAME }}"
-      GIT_COMMITTER_EMAIL: "${{ secrets.GIT_COMMITTER_NAME }}@users.noreply.github.com"
+      GIT_AUTHOR_EMAIL: "NewFuture@users.noreply.github.com"
 
     steps:
       - name: Checkout repository
@@ -50,6 +48,7 @@ jobs:
 
       - name: Run ESLint
         run: ./node_modules/eslint/bin/eslint.js _site/ --no-eslintrc --ext .js --ext .txt --ext .pac
+
 
       - name: Commit and Push Changes
         if: success()
