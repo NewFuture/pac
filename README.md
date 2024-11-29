@@ -11,6 +11,28 @@
 
 ---
 
+## all代理自动配置(PAC for all)
+
+* SS客户端使用本地PAC: 下载[此pac.txt](all/pac.txt),然后覆盖(或修改)本地文件夹下pac.txt
+* [全部代理localhost:1080](all/localhost/1080.pac)(自动切换下面3种代理协议): **`https://pac.newfuture.cc/all/localhost/1080.pac`**
+	- [仅SOCKS5://localhost:1080](all/socks5/localhost/1080.pac): **`https://pac.newfuture.cc/all/socks5/localhost/1080.pac`**
+	- [仅HTTP://localhost:1080](all/http/localhost/1080.pac): **`https://pac.newfuture.cc/all/http/localhost/1080.pac`**
+	- [仅SOCKS://localhost:1080](all/socks/localhost/1080.pac): **`https://pac.newfuture.cc/all/socks/localhost/1080.pac`**
+* [全部代理192.168.1.1:1080](all/192.168.1.1/1080.pac)(自动切换下面3种代理协议): **`https://pac.newfuture.cc/all/192.168.1.1/1080.pac`**
+	- [仅SOCKS5://192.168.1.1:1080](all/socks5/192.168.1.1/1080.pac): **`https://pac.newfuture.cc/all/socks5/192.168.1.1/1080.pac`**
+	- [仅HTTP://192.168.1.1:1080](all/http/192.168.1.1/1080.pac): **`https://pac.newfuture.cc/all/http/192.168.1.1/1080.pac`**
+	- [仅SOCKS://192.168.1.1:1080](all/socks/192.168.1.1/1080.pac): **`https://pac.newfuture.cc/all/socks/192.168.1.1/1080.pac`**
+* [全部代理192.168.1.2:1080](all/192.168.1.2/1080.pac)(自动切换下面3种代理协议): **`https://pac.newfuture.cc/all/192.168.1.2/1080.pac`**
+	- [仅SOCKS5://192.168.1.2:1080](all/socks5/192.168.1.2/1080.pac): **`https://pac.newfuture.cc/all/socks5/192.168.1.2/1080.pac`**
+	- [仅HTTP://192.168.1.2:1080](all/http/192.168.1.2/1080.pac): **`https://pac.newfuture.cc/all/http/192.168.1.2/1080.pac`**
+	- [仅SOCKS://192.168.1.2:1080](all/socks/192.168.1.2/1080.pac): **`https://pac.newfuture.cc/all/socks/192.168.1.2/1080.pac`**
+* [全部代理192.168.1.2:8008](all/192.168.1.2/8008.pac)(自动切换下面3种代理协议): **`https://pac.newfuture.cc/all/192.168.1.2/8008.pac`**
+	- [仅SOCKS5://192.168.1.2:8008](all/socks5/192.168.1.2/8008.pac): **`https://pac.newfuture.cc/all/socks5/192.168.1.2/8008.pac`**
+	- [仅HTTP://192.168.1.2:8008](all/http/192.168.1.2/8008.pac): **`https://pac.newfuture.cc/all/http/192.168.1.2/8008.pac`**
+	- [仅SOCKS://192.168.1.2:8008](all/socks/192.168.1.2/8008.pac): **`https://pac.newfuture.cc/all/socks/192.168.1.2/8008.pac`**
+
+---
+
 ## nku代理自动配置(PAC for nku)
 
 * SS客户端使用本地PAC: 下载[此pac.txt](nku/pac.txt),然后覆盖(或修改)本地文件夹下pac.txt
