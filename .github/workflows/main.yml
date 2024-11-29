@@ -52,10 +52,12 @@ jobs:
         if: success()
         run: |
           cd $BUILD_PATH
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git config --global user.name 'NewFuture'
+          git config --global user.email 'NewFuture@users.noreply.github.com'
           git add .
           git commit -m "Update generated files"
           git push origin $GH_BRANCH:$GH_BRANCH
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
   
         
