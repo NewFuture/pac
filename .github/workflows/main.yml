@@ -13,8 +13,6 @@ jobs:
       GH_REF: "https://github.com/NewFuture/pac.git"
       GH_BRANCH: "gh-pages"
       BUILD_PATH: "_site/"
-      GIT_AUTHOR_NAME: "NewFuture"
-      GIT_AUTHOR_EMAIL: "NewFuture@users.noreply.github.com"
 
     steps:
       - name: Checkout repository
@@ -50,12 +48,14 @@ jobs:
         run: ./node_modules/eslint/bin/eslint.js _site/ --no-eslintrc --ext .js --ext .txt --ext .pac
 
 
-      - name: Commit and Push Changes
+      - name: Commit and Push Changes to ghpages
         if: success()
         run: |
           cd $BUILD_PATH
-          git config user.name "$GIT_AUTHOR_NAME"
-          git config user.email "$GIT_AUTHOR_EMAIL"
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add .
-          git commit -m "auto build"
-          git push -f $GH_REF $GH_BRANCH:$GH_BRANCH
+          git commit -m "Update generated files"
+          git push $GH_BRANCH}:GH_BRANCH
+  
+        
