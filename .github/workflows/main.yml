@@ -35,8 +35,12 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - name: Clone GitHub Pages branch
-        run: git clone --depth=1 -b $GH_BRANCH $GH_REF $BUILD_PATH
+
+      - name: Checkout gp-pages branch
+        uses: actions/checkout@v2
+        with:
+          path: ${{env.BUILD_PATH}}
+          ref: ${{env.GH_BRANCH}}
 
       - name: Install ESLint
         run: npm install eslint@2.13.1 --cache-min 999999
